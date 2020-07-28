@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[DATAAREA] (
+    [ID]           NVARCHAR (4)  DEFAULT ('') NOT NULL,
+    [NAME]         NVARCHAR (40) DEFAULT ('') NOT NULL,
+    [ISVIRTUAL]    INT           DEFAULT ((0)) NOT NULL,
+    [ALWAYSNATIVE] INT           DEFAULT ((0)) NOT NULL,
+    [TIMEZONE]     INT           DEFAULT ((0)) NOT NULL,
+    [RECVERSION]   INT           DEFAULT ((1)) NOT NULL,
+    [PARTITION]    BIGINT        DEFAULT ((5637144576.)) NOT NULL,
+    [RECID]        BIGINT        NOT NULL,
+    CONSTRAINT [I_65533ID] PRIMARY KEY CLUSTERED ([PARTITION] ASC, [ID] ASC),
+    CHECK ([RECID]<>(0))
+);
+

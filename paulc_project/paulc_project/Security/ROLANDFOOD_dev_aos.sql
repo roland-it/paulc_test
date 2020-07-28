@@ -1,0 +1,2 @@
+﻿CREATE USER [ROLANDFOOD\dev_aos] FOR LOGIN [ROLANDFOOD\dev_aos];
+

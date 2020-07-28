@@ -1,0 +1,7 @@
+﻿CREATE ROLE [tb_datareader]
+    AUTHORIZATION [dbo];
+
+
+GO
+ALTER ROLE [tb_datareader] ADD MEMBER [ROLANDFOOD\DATAREPO_VP_RO];
+

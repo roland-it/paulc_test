@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[GENERALJOURNALENTRY] (
+    [ACCOUNTINGDATE]                 DATETIME      NOT NULL,
+    [LEDGERENTRYJOURNAL]             BIGINT        NOT NULL,
+    [ACKNOWLEDGEMENTDATE]            DATETIME      NOT NULL,
+    [LEDGERPOSTINGJOURNAL]           NVARCHAR (10) NOT NULL,
+    [FISCALCALENDARPERIOD]           BIGINT        NOT NULL,
+    [POSTINGLAYER]                   INT           NOT NULL,
+    [LEDGER]                         BIGINT        NOT NULL,
+    [LEDGERPOSTINGJOURNALDATAAREAID] NVARCHAR (4)  NOT NULL,
+    [JOURNALNUMBER]                  NVARCHAR (20) NOT NULL,
+    [TRANSFERID]                     BIGINT        NOT NULL,
+    [BUDGETSOURCELEDGERENTRYPOSTED]  BIGINT        NOT NULL,
+    [FISCALCALENDARYEAR]             BIGINT        NOT NULL,
+    [SUBLEDGERVOUCHER]               NVARCHAR (20) NOT NULL,
+    [SUBLEDGERVOUCHERDATAAREAID]     NVARCHAR (4)  NOT NULL,
+    [DOCUMENTDATE]                   DATETIME      NOT NULL,
+    [DOCUMENTNUMBER]                 NVARCHAR (20) NOT NULL,
+    [JOURNALCATEGORY]                INT           NOT NULL,
+    [CREATEDDATETIME]                DATETIME      NOT NULL,
+    [CREATEDBY]                      NVARCHAR (8)  NOT NULL,
+    [CREATEDTRANSACTIONID]           BIGINT        NOT NULL,
+    [RECVERSION]                     INT           NOT NULL,
+    [PARTITION]                      BIGINT        NOT NULL,
+    [RECID]                          BIGINT        NOT NULL,
+    CONSTRAINT [I_3123RECID] PRIMARY KEY CLUSTERED ([RECID] ASC)
+);
+

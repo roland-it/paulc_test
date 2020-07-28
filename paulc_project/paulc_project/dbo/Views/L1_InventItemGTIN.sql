@@ -1,0 +1,18 @@
+﻿
+CREATE VIEW [dbo].[L1_InventItemGTIN]
+As
+SELECT [ITEMID]
+      ,[INVENTDIMID]
+      ,[DESCRIPTION]
+      ,[GTINSETUP]
+      ,[UNITID]
+      ,[GLOBALTRADEITEMNUMBER]
+      ,[MODIFIEDDATETIME]
+      ,[DEL_MODIFIEDTIME]
+      ,[MODIFIEDBY]
+      ,[DATAAREAID]
+      ,[RECVERSION]
+      ,[PARTITION]
+      ,[RECID]
+	FROM	dbo.InventItemGTIN iib
+	

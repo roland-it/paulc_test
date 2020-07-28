@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[LOGISTICSADDRESSDISTRICT] (
+    [NAME]               NVARCHAR (60) DEFAULT ('') NOT NULL,
+    [DESCRIPTION]        NVARCHAR (60) DEFAULT ('') NOT NULL,
+    [CITY]               BIGINT        DEFAULT ((0)) NOT NULL,
+    [PROPERTIES_RU]      BIGINT        DEFAULT ((0)) NOT NULL,
+    [COUNTRYREGIONID_RU] NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [STATEID_RU]         NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [COUNTYID_RU]        NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [RECVERSION]         INT           DEFAULT ((1)) NOT NULL,
+    [PARTITION]          BIGINT        DEFAULT ((5637144576.)) NOT NULL,
+    [RECID]              BIGINT        NOT NULL,
+    CHECK ([RECID]<>(0))
+);
+

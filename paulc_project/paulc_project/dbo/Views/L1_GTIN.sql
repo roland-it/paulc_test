@@ -1,0 +1,8 @@
+﻿Create view L1_GTIN
+AS
+SELECT ItemId,
+		GLOBALTRADEITEMNUMBER,
+		UNITID,
+		dataareaid 		
+			FROM dbo.INVENTITEMGTIN iig
+		where iig.INVENTDIMID='ALLBLANK'

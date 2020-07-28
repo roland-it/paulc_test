@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[LEDGERENTRYJOURNAL] (
+    [JOURNALNUMBER]                NVARCHAR (10) NOT NULL,
+    [LEDGERJOURNALTABLEDATAAREAID] NVARCHAR (4)  NOT NULL,
+    [RECVERSION]                   INT           NOT NULL,
+    [PARTITION]                    BIGINT        NOT NULL,
+    [RECID]                        BIGINT        NOT NULL,
+    CONSTRAINT [I_3120RECID] PRIMARY KEY CLUSTERED ([RECID] ASC)
+);
+

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>paulc_project</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{98be9486-611c-40bd-929f-fcd5233f7c87}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>paulc_project</RootNamespace>
+    <AssemblyName>paulc_project</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\pstest.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSZIPCODE.sql" />
+    <Build Include="dbo\Tables\ROLCONTAINERBUILDDETAILS.sql" />
+    <Build Include="dbo\Tables\DATA_LOAD_STATUS_ERROR.sql" />
+    <Build Include="dbo\Tables\ROLCONTAINERBUILDHEADER.sql" />
+    <Build Include="dbo\Tables\MyNewTable_fromExcel.sql" />
+    <Build Include="dbo\Tables\pstest4.sql" />
+    <Build Include="dbo\Tables\ROLIMPORTCONTAINERTABLE.sql" />
+    <Build Include="dbo\Tables\ROLPROMOTIONSAPPLICATIONWB.sql" />
+    <Build Include="dbo\Tables\MARKUPTABLE.sql" />
+    <Build Include="dbo\Tables\ROLTMPLANDEDCOSTCGTRAN.sql" />
+    <Build Include="dbo\Tables\SalsifyProductFeed.sql" />
+    <Build Include="dbo\Tables\MARKUPTRANS.sql" />
+    <Build Include="dbo\Tables\PRICELIST_CURRENT.sql" />
+    <Build Include="dbo\Tables\ROLVESSELNAMETABLE.sql" />
+    <Build Include="dbo\Tables\MCRBROKERCONTRACTLINE.sql" />
+    <Build Include="dbo\Tables\DIRPARTYLOCATION.sql" />
+    <Build Include="dbo\Tables\DIRPARTYTABLE.sql" />
+    <Build Include="dbo\Tables\ROLWMSCONFIRMOUTBOUND.sql" />
+    <Build Include="dbo\Tables\DIRPARTYLOCATIONROLE.sql" />
+    <Build Include="dbo\Tables\Changing_Batch_Numbers.sql" />
+    <Build Include="dbo\Tables\MCRBROKERCONTRACTTABLE.sql" />
+    <Build Include="dbo\Tables\ROLWMSPORECEIPT.sql" />
+    <Build Include="dbo\Tables\DIRPERSONNAME.sql" />
+    <Build Include="dbo\Tables\NyListPriceTrans.sql" />
+    <Build Include="dbo\Tables\Changing_Batch_Numbers_hist.sql" />
+    <Build Include="dbo\Tables\PAYMTERM.sql" />
+    <Build Include="dbo\Tables\DLVMODE.sql" />
+    <Build Include="dbo\Tables\ROLWMSSHIPCONFIRM.sql" />
+    <Build Include="dbo\Tables\DLVTERM.sql" />
+    <Build Include="dbo\Tables\Order_Status_Report_Daily.sql" />
+    <Build Include="dbo\Tables\PRICEDISCGROUP.sql" />
+    <Build Include="dbo\Tables\PRICELIST_PREVIOUS.sql" />
+    <Build Include="dbo\Tables\HCMWORKER.sql" />
+    <Build Include="dbo\Tables\Order_Status_Report_Hist.sql" />
+    <Build Include="dbo\Tables\LINEOFBUSINESS.sql" />
+    <Build Include="dbo\Tables\PRICEDISCADMTRANS.sql" />
+    <Build Include="dbo\Tables\PRICEDISCTABLE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSCOUNTRYREGION.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSCOUNTY.sql" />
+    <Build Include="dbo\Tables\PURCHLINE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSDISTRICT.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSSCITY.sql" />
+    <Build Include="dbo\Tables\SQLDICTIONARY.sql" />
+    <Build Include="dbo\Tables\PURCHTABLE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSSTATE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSELECTRONICADDRESS.sql" />
+    <Build Include="dbo\Tables\TAMDEDUCTION.sql" />
+    <Build Include="dbo\Tables\SALESTABLE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSELECTRONICADDRESSROLE.sql" />
+    <Build Include="dbo\Tables\TAMDEDUCTIONUPDATEHISTORY.sql" />
+    <Build Include="dbo\Tables\LOGISTICSLOCATION.sql" />
+    <Build Include="dbo\Tables\UNITOFMEASURE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSLOCATIONROLE.sql" />
+    <Build Include="dbo\Tables\BANKACCOUNTTABLE.sql" />
+    <Build Include="dbo\Tables\Incremental_Tracking.sql" />
+    <Build Include="dbo\Tables\LOGISTICSPOSTALADDRESS.sql" />
+    <Build Include="dbo\Tables\UNITOFMEASURECONVERSION.sql" />
+    <Build Include="dbo\Tables\VENDINVOICEINFOLINE.sql" />
+    <Build Include="dbo\Tables\VENDINVOICEINFOTABLE.sql" />
+    <Build Include="dbo\Tables\BOMCALCTRANS.sql" />
+    <Build Include="dbo\Tables\VENDTABLE.sql" />
+    <Build Include="dbo\Tables\Sf_Lost_Placement__c.sql" />
+    <Build Include="dbo\Tables\VENDINVOICEJOUR.sql" />
+    <Build Include="dbo\Tables\Sf_OpportunityLineItem.sql" />
+    <Build Include="dbo\Tables\VENDINVOICEPURCHLINK.sql" />
+    <Build Include="dbo\Tables\Sf_Opportunity.sql" />
+    <Build Include="dbo\Tables\INVENTTABLE.sql" />
+    <Build Include="dbo\Tables\Sf_Product2.sql" />
+    <Build Include="dbo\Tables\VENDINVOICETRANS.sql" />
+    <Build Include="dbo\Tables\Sf_Supplier_Offer__c.sql" />
+    <Build Include="dbo\Tables\VENDPACKINGSLIPJOUR.sql" />
+    <Build Include="dbo\Tables\Sf_Program__c.sql" />
+    <Build Include="dbo\Tables\Sf_Sample_Tracking__c.sql" />
+    <Build Include="dbo\Tables\VENDPACKINGSLIPTRANS.sql" />
+    <Build Include="dbo\Tables\CUSTTRANS.sql" />
+    <Build Include="dbo\Tables\Sf_Inquiry__c.sql" />
+    <Build Include="dbo\Tables\SALESLINE.sql" />
+    <Build Include="dbo\Tables\Sf_Item_List__c.sql" />
+    <Build Include="dbo\Tables\JOBSTATUS.sql" />
+    <Build Include="dbo\Tables\BARCODESETUP.sql" />
+    <Build Include="dbo\Tables\VENDTRANS.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTEDIRCATEGORY.sql" />
+    <Build Include="dbo\Tables\CURRENCY.sql" />
+    <Build Include="dbo\Tables\CUSTTABLE.sql" />
+    <Build Include="dbo\Tables\WMSSTOREZONE.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTELEVELVALUE.sql" />
+    <Build Include="dbo\Tables\CURRENCYEURODENOMINATION.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTEVALUECOMBINATION.sql" />
+    <Build Include="dbo\Tables\CUSTINVOICEJOUR.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTEVALUEGROUPCOMBINATION.sql" />
+    <Build Include="dbo\Tables\Vp_tmpTLESummary.sql" />
+    <Build Include="dbo\Tables\CUSTPACKINGSLIPJOUR.sql" />
+    <Build Include="dbo\Tables\CUSTPACKINGSLIPTRANS.sql" />
+    <Build Include="dbo\Tables\CUSTINVOICETRANS.sql" />
+    <Build Include="dbo\Tables\DATAAREA.sql" />
+    <Build Include="dbo\Tables\DIRDUNSNUMBER.sql" />
+    <Build Include="dbo\Tables\Sf_User.sql" />
+    <Build Include="dbo\Tables\Sl_ProductAttribute_old.sql" />
+    <Build Include="dbo\Tables\SMMBUSRELSUBSEGMENTGROUP.sql" />
+    <Build Include="dbo\Tables\INVENTSUM.sql" />
+    <Build Include="dbo\Tables\SMMBUSRELCHAINGROUP.sql" />
+    <Build Include="dbo\Tables\GENERALJOURNALACCOUNTENTRY.sql" />
+    <Build Include="dbo\Tables\L2_Customer_Primary_Legal_Entity.sql" />
+    <Build Include="dbo\Tables\ECORESCATEGORY.sql" />
+    <Build Include="dbo\Tables\GENERALJOURNALENTRY.sql" />
+    <Build Include="dbo\Tables\ECORESCATEGORYHIERARCHY.sql" />
+    <Build Include="dbo\Tables\INTRASTATPORT.sql" />
+    <Build Include="dbo\Tables\ECORESPRODUCT.sql" />
+    <Build Include="dbo\Tables\L6_SF_Customer_Incremental.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTEVALUESETITEM.sql" />
+    <Build Include="dbo\Tables\ECORESPRODUCTCATEGORY.sql" />
+    <Build Include="dbo\Tables\L6_SF_PriceList_Incremental.sql" />
+    <Build Include="dbo\Tables\INVENTCOSTTRANS.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTEVALUE.sql" />
+    <Build Include="dbo\Tables\ECORESPRODUCTRELATIONTABLE.sql" />
+    <Build Include="dbo\Tables\INVENTCOSTTRANSVARIANCE.sql" />
+    <Build Include="dbo\Tables\DIMENSIONATTRIBUTE.sql" />
+    <Build Include="dbo\Tables\ECORESPRODUCTRELATIONTYPE.sql" />
+    <Build Include="dbo\Tables\Sl_ProductAttribute2.sql" />
+    <Build Include="dbo\Tables\ECORESPRODUCTTRANSLATION.sql" />
+    <Build Include="dbo\Tables\DIMENSIONFINANCIALTAG.sql" />
+    <Build Include="dbo\Tables\INVENTITEMGROUPITEM.sql" />
+    <Build Include="dbo\Tables\EXCHANGERATE.sql" />
+    <Build Include="dbo\Tables\SMMBUSRELSALESDISTRICTGROUP.sql" />
+    <Build Include="dbo\Tables\EXCHANGERATECURRENCYPAIR.sql" />
+    <Build Include="dbo\Tables\L6_SF_SalesOrder_Incremental.sql" />
+    <Build Include="dbo\Tables\INVENTBATCH.sql" />
+    <Build Include="dbo\Tables\L6_SF_SalesLine_Incremental.sql" />
+    <Build Include="dbo\Tables\INVENTBUYERGROUP.sql" />
+    <Build Include="dbo\Tables\INVENTJOURNALTRANS.sql" />
+    <Build Include="dbo\Tables\CUSTOMER_PRIMARY_LEGAL_ENTITY_ACCT.sql" />
+    <Build Include="dbo\Tables\INVENTDIM.sql" />
+    <Build Include="dbo\Tables\L6_SF_Inventory_Incremental.sql" />
+    <Build Include="dbo\Tables\L6_SF_Broker_Incremental.sql" />
+    <Build Include="dbo\Tables\INVENTITEMBARCODE.sql" />
+    <Build Include="dbo\Tables\WHSPHYSDIMUOM.sql" />
+    <Build Include="dbo\Tables\INVENTPOSTING.sql" />
+    <Build Include="dbo\Tables\LOG_MESSAGES.sql" />
+    <Build Include="dbo\Tables\INVENTITEMGTIN.sql" />
+    <Build Include="dbo\Tables\INVENTITEMINVENTSETUP.sql" />
+    <Build Include="dbo\Tables\INVENTITEMLOCATION.sql" />
+    <Build Include="dbo\Tables\INVENTITEMPRICE.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSORIGINPURCHLINE.sql" />
+    <Build Include="dbo\Tables\INVENTITEMPURCHSETUP.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSPOSTING.sql" />
+    <Build Include="dbo\Tables\INVENTITEMSALESSETUP.sql" />
+    <Build Include="dbo\Tables\L6_SF_Product_Incremental.sql" />
+    <Build Include="dbo\Tables\JSTPMINDIRECTBILLBACKLINE.sql" />
+    <Build Include="dbo\Tables\INVENTLOCATION.sql" />
+    <Build Include="dbo\Tables\AXEnums.sql" />
+    <Build Include="dbo\Tables\JSTPMINDIRECTBILLBACKTABLE.sql" />
+    <Build Include="dbo\Tables\INVENTLOCATIONLOGISTICSLOCATION.sql" />
+    <Build Include="dbo\Tables\LEDGER.sql" />
+    <Build Include="dbo\Tables\INVENTLOCATIONLOGISTICSLOCATIONROLE.sql" />
+    <Build Include="dbo\Tables\LEDGERENTRYJOURNAL.sql" />
+    <Build Include="dbo\Tables\L1_VP_POStatus_History.sql" />
+    <Build Include="dbo\Tables\PDSDISPOSITIONMASTER.sql" />
+    <Build Include="dbo\Tables\LEDGERJOURNALTABLE.sql" />
+    <Build Include="dbo\Tables\INVENTTABLEMODULE.sql" />
+    <Build Include="dbo\Tables\LEDGERJOURNALTRANS.sql" />
+    <Build Include="dbo\Tables\INVENTTRANS.sql" />
+    <Build Include="dbo\Tables\Sf_Account.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSFERJOUR.sql" />
+    <Build Include="dbo\Tables\SalesOrderInvoiced.sql" />
+    <Build Include="dbo\Tables\Vp_tmpTLESummary_History.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSFERLINE.sql" />
+    <Build Include="dbo\Tables\DATA_LOAD_ERROR.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSFERTABLE.sql" />
+    <Build Include="dbo\Tables\MAINACCOUNT.sql" />
+    <Build Include="dbo\Tables\INVENTTRANSORIGIN.sql" />
+    <Build Include="dbo\Tables\EXCHANGERATETYPE.sql" />
+    <Build Include="dbo\Tables\LOGISTICSADDRESSCOUNTRYREGIONTRANSLATION.sql" />
+    <Build Include="dbo\Views\L3_VP_TLESummary_History.sql" />
+    <Build Include="dbo\Views\L2_Inventory.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEDENTODENAFTERBOTHSTART.sql" />
+    <Build Include="dbo\Views\L2_ReservedInventory.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEVIEW.sql" />
+    <Build Include="dbo\Views\L1_Salesline.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEUNIONVIEW.sql" />
+    <Build Include="dbo\Views\L4_SF_SalesLine.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEPRIORTOSTARTDATEVIEW.sql" />
+    <Build Include="dbo\Views\L3_Broker_Active.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEDENTOEUROAFTERSTART.sql" />
+    <Build Include="dbo\Views\L3_PriceList_NY.sql" />
+    <Build Include="dbo\Views\EXCHANGERATESAMEFROMTOCURRENCYVIEW.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEEFFECTIVEVIEW.sql" />
+    <Build Include="dbo\Views\L1_ExchangeRate.sql" />
+    <Build Include="dbo\Views\L2_CustInvoiceTrans.sql" />
+    <Build Include="dbo\Views\Sl_ProductAttribute.sql" />
+    <Build Include="dbo\Views\L2_InventTransBatch.sql" />
+    <Build Include="dbo\Views\Tableau_L2_NyPriceList.sql" />
+    <Build Include="dbo\Views\L6_SF_Customer.sql" />
+    <Build Include="dbo\Views\L2_PurchaseOrders.sql" />
+    <Build Include="dbo\Views\INVENTITEMPRICECURRENTACTIVE.sql" />
+    <Build Include="dbo\Views\L6_SF_PriceList_NY.sql" />
+    <Build Include="dbo\Views\Sf_Customer_IAM_BDM.sql" />
+    <Build Include="dbo\Views\L2_PriceList_OLD_TRANSTABLE.sql" />
+    <Build Include="dbo\Views\L1_VP_TLESummary.sql" />
+    <Build Include="dbo\Views\L1_SL_Product.sql" />
+    <Build Include="dbo\Views\L4_SL_Product.sql" />
+    <Build Include="dbo\Views\L1_LogisticsPostalAddress.sql" />
+    <Build Include="dbo\Views\L2_PriceList.sql" />
+    <Build Include="dbo\Views\L2_BasePriceList.sql" />
+    <Build Include="dbo\Views\L4_SF_PriceList_NY.sql" />
+    <Build Include="dbo\Views\L1_Customer.sql" />
+    <Build Include="dbo\Views\L4_SF_Customer.sql" />
+    <Build Include="dbo\Views\LOGISTICSPOSTALADDRESSVIEW.sql" />
+    <Build Include="dbo\Views\DIRPARTYPOSTALADDRESSVIEW.sql" />
+    <Build Include="dbo\Views\DIRPARTYNAMEPRIMARYADDRESSVIEW.sql" />
+    <Build Include="dbo\Views\L2_DirPartyNamePrimaryAddressView.sql" />
+    <Build Include="dbo\Views\L1_BrokerContract.sql" />
+    <Build Include="dbo\Views\L2_Customer.sql" />
+    <Build Include="dbo\Views\L4_SF_PriceList_NY_old.sql" />
+    <Build Include="dbo\Views\L2_BrokerContract.sql" />
+    <Build Include="dbo\Views\L1_Vendor.sql" />
+    <Build Include="dbo\Views\L3_VP_TLESummary.sql" />
+    <Build Include="dbo\Views\L2_Vendor.sql" />
+    <Build Include="dbo\Views\L4_TB_TLESummary.sql" />
+    <Build Include="dbo\Views\L2_Broker.sql" />
+    <Build Include="dbo\Views\L4_SF_Product.sql" />
+    <Build Include="dbo\Views\L1_Item.sql" />
+    <Build Include="dbo\Views\DEFAULTDIMENSIONVIEW.sql" />
+    <Build Include="dbo\Views\L1_InventTable.sql" />
+    <Build Include="dbo\Views\L2_Item.sql" />
+    <Build Include="dbo\Views\L6_SF_Broker.sql" />
+    <Build Include="dbo\Views\L6_SF_Inventory.sql" />
+    <Build Include="dbo\Views\L6_SF_Product.sql" />
+    <Build Include="dbo\Views\L1_UPC.sql" />
+    <Build Include="dbo\Views\L6_SF_SalesLine.sql" />
+    <Build Include="dbo\Views\L1_GTIN.sql" />
+    <Build Include="dbo\Views\L6_SF_SalesOrder.sql" />
+    <Build Include="dbo\Views\L4_SF_Broker.sql" />
+    <Build Include="dbo\Views\L2_ItemPack.sql" />
+    <Build Include="dbo\Views\L1_UOMConversion.sql" />
+    <Build Include="dbo\Views\L1_ItemCategory.sql" />
+    <Build Include="dbo\Views\L1_InventItemBarcode.sql" />
+    <Build Include="dbo\Views\L1_InventItemGTIN.sql" />
+    <Build Include="dbo\Views\L1_SubstituteItem.sql" />
+    <Build Include="dbo\Views\L2_SubstituteItem.sql" />
+    <Build Include="dbo\Views\L1_SalesOrder.sql" />
+    <Build Include="dbo\Views\L1_Warehouse.sql" />
+    <Build Include="dbo\Views\L1_Inventory.sql" />
+    <Build Include="dbo\Views\L2_SalesOrder.sql" />
+    <Build Include="dbo\Views\L1_VP_POStatus.sql" />
+    <Build Include="dbo\Views\L4_SF_Inventory.sql" />
+    <Build Include="dbo\Views\L2_LogisticsPostalAddress.sql" />
+    <Build Include="dbo\Views\L4_SF_SalesOrder.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEEURODENOMINATIONVIEW.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEDENTODENBETWEENSTART.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEVARTODENAFTERSTARTVIEW.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEDENTOVARAFTERSTARTVIEW.sql" />
+    <Build Include="dbo\Views\EXCHANGERATEFIXEDCURRENCYVIEW.sql" />
+    <Build Include="dbo\Views\L1_VP_TLESummary_History.sql" />
+    <Build Include="Security\tb_datareader.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_RW.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_RW_1.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_Owners.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_Owners_1.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_RO.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_DEV_RO_1.sql" />
+    <Build Include="Security\ROLANDFOOD_integrationadmin.sql" />
+    <Build Include="Security\bcp_test.sql" />
+    <Build Include="Security\bcp_test_1.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_VP_RO.sql" />
+    <Build Include="Security\ROLANDFOOD_DATAREPO_VP_RO_1.sql" />
+    <Build Include="Security\ROLANDFOOD_lmadmin.sql" />
+    <Build Include="Security\ROLANDFOOD_lmadmin_1.sql" />
+    <Build Include="Security\ROLANDFOOD_TST_AOS.sql" />
+    <Build Include="Security\ROLANDFOOD_TST_AOS_1.sql" />
+    <Build Include="Security\ROLANDFOOD_dev_aos.sql" />
+    <Build Include="Security\ROLANDFOOD_dev_aos_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\Today.sql" />
+    <Build Include="dbo\Functions\fnAXInventory.sql" />
+    <Build Include="dbo\Functions\fnPreviousPriceList.sql" />
+    <Build Include="dbo\Stored Procedures\prCreateDataRepoIndices.sql" />
+    <Build Include="dbo\Stored Procedures\prLoadStatusError.sql" />
+    <Build Include="dbo\Stored Procedures\prLoadNyListPriceTrans.sql" />
+    <Build Include="dbo\Stored Procedures\prDropDataRepoIndices.sql" />
+    <Build Include="dbo\Stored Procedures\prIncrementalDataExtract.sql" />
+    <Build Include="dbo\Stored Procedures\prPrimaryCustomerLoad.sql" />
+    <Build Include="dbo\Stored Procedures\prTLE_Summary_Upsert_old.sql" />
+    <Build Include="dbo\Stored Procedures\prTLE_Summary_Upsert.sql" />
+    <Build Include="Security\ROLANDFOOD_integrationadmin_1.sql" />
+  </ItemGroup>
+</Project>

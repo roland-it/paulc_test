@@ -1,0 +1,21 @@
+﻿CREATE TABLE [dbo].[ROLTMPLANDEDCOSTCGTRAN] (
+    [ACCRUALAMOUNT]          NUMERIC (32, 16) NOT NULL,
+    [ADJUSTMENTAMOUNT]       NUMERIC (32, 16) NOT NULL,
+    [BALANCE]                NUMERIC (32, 16) NOT NULL,
+    [COSTGROUPID]            NVARCHAR (10)    NOT NULL,
+    [DONESTATUS]             INT              NOT NULL,
+    [INVOICEAMOUNT]          NUMERIC (32, 16) NOT NULL,
+    [LASTCONFIRMATIONDATE]   DATETIME         NOT NULL,
+    [LEDGERDIMENSIONACCOUNT] BIGINT           NOT NULL,
+    [MAINACCOUNTNUM]         NVARCHAR (20)    NOT NULL,
+    [PURCHID]                NVARCHAR (20)    NOT NULL,
+    [WIPACCRUALAMOUNT]       NUMERIC (32, 16) NOT NULL,
+    [DATAAREAID]             NVARCHAR (4)     NOT NULL,
+    [RECVERSION]             INT              NOT NULL,
+    [PARTITION]              BIGINT           NOT NULL,
+    [RECID]                  BIGINT           NOT NULL,
+    [REFRECID]               BIGINT           NOT NULL,
+    [REFTABLEID]             INT              NOT NULL,
+    CONSTRAINT [I_106203RECID] PRIMARY KEY CLUSTERED ([RECID] ASC)
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[L2_Customer_Primary_Legal_Entity] (
+    [ACCOUNTNUM] NVARCHAR (20) NOT NULL,
+    [DATAAREAID] VARCHAR (4)   NULL,
+    PRIMARY KEY CLUSTERED ([ACCOUNTNUM] ASC)
+);
+

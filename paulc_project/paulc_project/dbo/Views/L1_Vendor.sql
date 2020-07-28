@@ -1,0 +1,7 @@
+﻿
+CREATE VIEW [dbo].[L1_Vendor]
+AS
+SELECT
+vt.*,dpt.Name, dpt.KNOWNAS
+FROM VENDTABLE vt INNER JOIN DIRPARTYTABLE dpt
+ON vt.PARTY = dpt.recid 

@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [bcp_test]
+    WITH PASSWORD = N'6upblKncj2qsrzb7{`|qcnyImsFT7_&#$!~<S~zmdlt^fktq', SID = 0x8A2A94C584BB8C4C9536D350A222AEA3, DEFAULT_DATABASE = [datarepo], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

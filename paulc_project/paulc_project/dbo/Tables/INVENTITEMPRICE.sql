@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[INVENTITEMPRICE] (
+    [ITEMID]              NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [VERSIONID]           NVARCHAR (10)    DEFAULT ('') NOT NULL,
+    [PRICETYPE]           INT              DEFAULT ((0)) NOT NULL,
+    [INVENTDIMID]         NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [MARKUP]              NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [PRICEUNIT]           NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [PRICE]               NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [PRICECALCID]         NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [UNITID]              NVARCHAR (10)    DEFAULT ('') NOT NULL,
+    [PRICEALLOCATEMARKUP] INT              DEFAULT ((0)) NOT NULL,
+    [PRICEQTY]            NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [STDCOSTTRANSDATE]    DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [STDCOSTVOUCHER]      NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [COSTINGTYPE]         INT              DEFAULT ((0)) NOT NULL,
+    [ACTIVATIONDATE]      DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [PRICESECCUR_RU]      NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [MARKUPSECCUR_RU]     NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [MODIFIEDDATETIME]    DATETIME         DEFAULT (dateadd(millisecond, -datepart(millisecond,getutcdate()),getutcdate())) NOT NULL,
+    [CREATEDDATETIME]     DATETIME         DEFAULT (dateadd(millisecond, -datepart(millisecond,getutcdate()),getutcdate())) NOT NULL,
+    [DATAAREAID]          NVARCHAR (4)     DEFAULT ('dat') NOT NULL,
+    [RECVERSION]          INT              DEFAULT ((1)) NOT NULL,
+    [PARTITION]           BIGINT           DEFAULT ((5637144576.)) NOT NULL,
+    [RECID]               BIGINT           NOT NULL,
+    CONSTRAINT [I_2479ITEMIDX] PRIMARY KEY CLUSTERED ([PARTITION] ASC, [DATAAREAID] ASC, [ITEMID] ASC, [INVENTDIMID] ASC, [PRICETYPE] ASC, [ACTIVATIONDATE] ASC, [CREATEDDATETIME] ASC),
+    CHECK ([RECID]<>(0))
+);
+

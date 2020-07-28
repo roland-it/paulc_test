@@ -1,0 +1,19 @@
+﻿CREATE TABLE [dbo].[LOGISTICSADDRESSCOUNTRYREGION] (
+    [COUNTRYREGIONID]           NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [ISOCODE]                   NVARCHAR (2)  DEFAULT ('') NOT NULL,
+    [ADDRFORMAT]                NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [CURRENCYCODE]              NVARCHAR (3)  DEFAULT ('') NOT NULL,
+    [TIMEZONE]                  INT           DEFAULT ((0)) NOT NULL,
+    [ADDRESSUSEZIPPLUS4]        INT           DEFAULT ((0)) NOT NULL,
+    [ISIMMUTABLE]               INT           DEFAULT ((0)) NOT NULL,
+    [BACENCODE_BR]              NVARCHAR (4)  DEFAULT ('') NOT NULL,
+    [OKSMCODE_RU]               NVARCHAR (3)  DEFAULT ('') NOT NULL,
+    [MCRIOR_FACILITY_ID]        NVARCHAR (12) DEFAULT ('') NOT NULL,
+    [RPAYPARENTCOUNTRYREGIONID] NVARCHAR (10) DEFAULT ('') NOT NULL,
+    [MEMBEROFCUSTOMSUNION_RU]   INT           DEFAULT ((0)) NOT NULL,
+    [RECVERSION]                INT           DEFAULT ((1)) NOT NULL,
+    [PARTITION]                 BIGINT        DEFAULT ((5637144576.)) NOT NULL,
+    [RECID]                     BIGINT        NOT NULL,
+    CHECK ([RECID]<>(0))
+);
+

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Order_Status_Report_Daily] (
+    [wh_id]                    VARCHAR (50) NULL,
+    [ordnum]                   VARCHAR (50) NULL,
+    [ord_received]             DATETIME     NULL,
+    [ordtyp]                   VARCHAR (50) NULL,
+    [prtnum]                   VARCHAR (50) NULL,
+    [requested_quantity_cases] VARCHAR (50) NULL,
+    [lotnum_ordered]           VARCHAR (50) NULL,
+    [lotnum_picked]            VARCHAR (50) NULL,
+    [shipped_quantity_cases]   VARCHAR (50) NULL,
+    [staged_quantity_cases]    VARCHAR (50) NULL,
+    [picked_quantity_cases]    VARCHAR (50) NULL,
+    [shipment_status]          VARCHAR (50) NULL,
+    [carcod]                   VARCHAR (50) NULL,
+    [srvlvl]                   VARCHAR (50) NULL,
+    [ship_id]                  VARCHAR (50) NULL,
+    [order_status]             VARCHAR (50) NULL,
+    [untqty]                   VARCHAR (50) NULL,
+    [ordqty]                   VARCHAR (50) NULL,
+    [order_allocated_date]     DATETIME     NULL,
+    [order_staged_date]        DATETIME     NULL,
+    [shipment_loaded_date]     DATETIME     NULL,
+    [trlr_dispatched_date]     DATETIME     NULL,
+    [shpsts]                   VARCHAR (50) NULL,
+    [load_date]                DATETIME     CONSTRAINT [DF_Order_Status_Report_Daily_load_date_1] DEFAULT (getdate()) NULL
+);
+

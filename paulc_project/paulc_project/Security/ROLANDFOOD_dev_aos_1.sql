@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ROLANDFOOD\dev_aos]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

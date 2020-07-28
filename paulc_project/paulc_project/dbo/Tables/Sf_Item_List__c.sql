@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[Sf_Item_List__c] (
+    [OwnerId]               VARCHAR (18)    NOT NULL,
+    [RecordTypeId]          VARCHAR (18)    NULL,
+    [LastActivityDate]      DATETIME        NULL,
+    [Item__c]               VARCHAR (1300)  NULL,
+    [Lead__c]               VARCHAR (18)    NULL,
+    [Item_Number_Search__c] VARCHAR (18)    NULL,
+    [Quantity__c]           REAL            NULL,
+    [Sample_Tracking__c]    VARCHAR (18)    NULL,
+    [Discount__c]           REAL            NULL,
+    [Item_Number__c]        VARCHAR (12)    NULL,
+    [Product_Name__c]       VARCHAR (200)   NULL,
+    [Buyer_Name__c]         VARCHAR (100)   NULL,
+    [Sales_Price__c]        DECIMAL (12, 2) NULL,
+    [Supplier_Offer__c]     VARCHAR (18)    NULL,
+    [Total_Price__c]        DECIMAL (18, 2) NULL,
+    [Id]                    VARCHAR (18)    NOT NULL,
+    [IsDeleted]             BIT             NOT NULL,
+    [Name]                  VARCHAR (80)    NOT NULL,
+    [CreatedDate]           DATETIME        NOT NULL,
+    [CreatedById]           VARCHAR (18)    NOT NULL,
+    [LastModifiedDate]      DATETIME        NOT NULL,
+    [LastModifiedById]      VARCHAR (18)    NOT NULL,
+    [SystemModstamp]        DATETIME        NOT NULL
+);
+

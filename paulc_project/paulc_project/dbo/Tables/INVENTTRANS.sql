@@ -1,0 +1,96 @@
+﻿CREATE TABLE [dbo].[INVENTTRANS] (
+    [ITEMID]                            NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [STATUSISSUE]                       INT              DEFAULT ((0)) NOT NULL,
+    [INTERCOMPANYINVENTDIMTRANSFERRED]  INT              DEFAULT ((0)) NOT NULL,
+    [DATEPHYSICAL]                      DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [QTY]                               NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTPOSTED]                  NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [CURRENCYCODE]                      NVARCHAR (3)     DEFAULT ('') NOT NULL,
+    [INVOICEID]                         NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [VOUCHER]                           NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [DATEEXPECTED]                      DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [DATEFINANCIAL]                     DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [COSTAMOUNTPHYSICAL]                NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [STATUSRECEIPT]                     INT              DEFAULT ((0)) NOT NULL,
+    [PACKINGSLIPRETURNED]               INT              DEFAULT ((0)) NOT NULL,
+    [INVOICERETURNED]                   INT              DEFAULT ((0)) NOT NULL,
+    [PACKINGSLIPID]                     NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [VOUCHERPHYSICAL]                   NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [COSTAMOUNTADJUSTMENT]              NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [SHIPPINGDATEREQUESTED]             DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [SHIPPINGDATECONFIRMED]             DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [QTYSETTLED]                        NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTSETTLED]                 NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [VALUEOPEN]                         INT              DEFAULT ((0)) NOT NULL,
+    [ACTIVITYNUMBER]                    NVARCHAR (50)    DEFAULT ('') NOT NULL,
+    [DATESTATUS]                        DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [COSTAMOUNTSTD]                     NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [DATECLOSED]                        DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [PICKINGROUTEID]                    NVARCHAR (10)    DEFAULT ('') NOT NULL,
+    [COSTAMOUNTOPERATIONS]              NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [RETURNINVENTTRANSORIGIN]           BIGINT           DEFAULT ((0)) NOT NULL,
+    [PROJID]                            NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [PROJCATEGORYID]                    NVARCHAR (30)    DEFAULT ('') NOT NULL,
+    [INVENTDIMID]                       NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [MARKINGREFINVENTTRANSORIGIN]       BIGINT           DEFAULT ((0)) NOT NULL,
+    [INVENTDIMFIXED]                    INT              DEFAULT ((0)) NOT NULL,
+    [DATEINVENT]                        DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [TRANSCHILDREFID]                   NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [TRANSCHILDTYPE]                    INT              DEFAULT ((0)) NOT NULL,
+    [TIMEEXPECTED]                      INT              DEFAULT ((0)) NOT NULL,
+    [REVENUEAMOUNTPHYSICAL]             NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [PROJADJUSTREFID]                   NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [TAXAMOUNTPHYSICAL]                 NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [INVENTTRANSORIGIN]                 BIGINT           DEFAULT ((0)) NOT NULL,
+    [STORNO_RU]                         INT              DEFAULT ((0)) NOT NULL,
+    [STORNOPHYSICAL_RU]                 INT              DEFAULT ((0)) NOT NULL,
+    [INVENTDIMIDSALES_RU]               NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [GROUPREFTYPE_RU]                   INT              DEFAULT ((0)) NOT NULL,
+    [GROUPREFID_RU]                     NVARCHAR (20)    DEFAULT ('') NOT NULL,
+    [COSTAMOUNTSECCURPOSTED_RU]         NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTSECCURPHYSICAL_RU]       NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTSECCURADJUSTMENT_RU]     NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [DATECLOSEDSECCUR_RU]               DATETIME         DEFAULT ('1900-01-01 00:00:00.000') NOT NULL,
+    [QTYSETTLEDSECCUR_RU]               NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTSETTLEDSECCUR_RU]        NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [VALUEOPENSECCUR_RU]                INT              DEFAULT ((0)) NOT NULL,
+    [COSTAMOUNTSTDSECCUR_RU]            NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [INVENTTRANSORIGINDELIVERY_RU]      BIGINT           DEFAULT ((0)) NOT NULL,
+    [INVENTTRANSORIGINSALES_RU]         BIGINT           DEFAULT ((0)) NOT NULL,
+    [INVENTTRANSORIGINTRANSIT_RU]       BIGINT           DEFAULT ((0)) NOT NULL,
+    [PDSCWQTY]                          NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [PDSCWSETTLED]                      NUMERIC (32, 16) DEFAULT ((0)) NOT NULL,
+    [NONFINANCIALTRANSFERINVENTCLOSING] BIGINT           DEFAULT ((0)) NOT NULL,
+    [MODIFIEDDATETIME]                  DATETIME         DEFAULT (dateadd(millisecond, -datepart(millisecond,getutcdate()),getutcdate())) NOT NULL,
+    [DATAAREAID]                        NVARCHAR (4)     DEFAULT ('dat') NOT NULL,
+    [RECVERSION]                        INT              DEFAULT ((1)) NOT NULL,
+    [PARTITION]                         BIGINT           DEFAULT ((5637144576.)) NOT NULL,
+    [RECID]                             BIGINT           NOT NULL,
+    CONSTRAINT [I_177RECID] PRIMARY KEY NONCLUSTERED ([RECID] ASC),
+    CHECK ([RECID]<>(0))
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [VW_INDX_INVENTRANS]
+    ON [dbo].[INVENTTRANS]([PACKINGSLIPRETURNED] ASC)
+    INCLUDE([STATUSISSUE], [DATEPHYSICAL], [QTY], [STATUSRECEIPT], [INVENTDIMID], [INVENTTRANSORIGIN], [DATAAREAID], [PARTITION]);
+
+
+GO
+CREATE NONCLUSTERED INDEX [VW_INDX_INVENTRANS2]
+    ON [dbo].[INVENTTRANS]([PACKINGSLIPRETURNED] ASC, [INVENTTRANSORIGIN] ASC)
+    INCLUDE([STATUSISSUE], [DATEPHYSICAL], [QTY], [STATUSRECEIPT], [INVENTDIMID], [DATAAREAID], [PARTITION]);
+
+
+GO
+CREATE NONCLUSTERED INDEX [VW_INDX_INVTRANS_DA]
+    ON [dbo].[INVENTTRANS]([DATAAREAID] ASC)
+    INCLUDE([ITEMID], [DATEPHYSICAL], [QTY], [INVENTDIMID], [DATEINVENT]);
+
+
+GO
+CREATE NONCLUSTERED INDEX [VW_INDX_INVTRANS_DIM_DA]
+    ON [dbo].[INVENTTRANS]([INVENTDIMID] ASC, [DATAAREAID] ASC)
+    INCLUDE([ITEMID], [DATEPHYSICAL], [QTY], [DATEINVENT]);
+

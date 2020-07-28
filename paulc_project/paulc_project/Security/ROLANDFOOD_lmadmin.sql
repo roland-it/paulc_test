@@ -1,0 +1,2 @@
+﻿CREATE USER [ROLANDFOOD\lmadmin] FOR LOGIN [ROLANDFOOD\lmadmin];
+

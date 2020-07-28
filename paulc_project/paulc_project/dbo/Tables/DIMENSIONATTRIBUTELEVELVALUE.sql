@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[DIMENSIONATTRIBUTELEVELVALUE] (
+    [ORDINAL]                      INT           NOT NULL,
+    [DISPLAYVALUE]                 NVARCHAR (30) NOT NULL,
+    [DIMENSIONATTRIBUTEVALUE]      BIGINT        NOT NULL,
+    [DIMENSIONATTRIBUTEVALUEGROUP] BIGINT        NOT NULL,
+    [RECVERSION]                   INT           NOT NULL,
+    [PARTITION]                    BIGINT        NOT NULL,
+    [RECID]                        BIGINT        NOT NULL,
+    CONSTRAINT [I_380RECID] PRIMARY KEY NONCLUSTERED ([RECID] ASC)
+);
+

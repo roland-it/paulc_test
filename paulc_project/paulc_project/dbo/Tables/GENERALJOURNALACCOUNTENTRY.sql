@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[GENERALJOURNALACCOUNTENTRY] (
+    [TRANSACTIONCURRENCYAMOUNT]  NUMERIC (32, 16) NOT NULL,
+    [ACCOUNTINGCURRENCYAMOUNT]   NUMERIC (32, 16) NOT NULL,
+    [REPORTINGCURRENCYAMOUNT]    NUMERIC (32, 16) NOT NULL,
+    [QUANTITY]                   NUMERIC (32, 16) NOT NULL,
+    [ALLOCATIONLEVEL]            INT              NOT NULL,
+    [ISCORRECTION]               INT              NOT NULL,
+    [ISCREDIT]                   INT              NOT NULL,
+    [TRANSACTIONCURRENCYCODE]    NVARCHAR (3)     NOT NULL,
+    [PAYMENTREFERENCE]           NVARCHAR (20)    NOT NULL,
+    [POSTINGTYPE]                INT              NOT NULL,
+    [LEDGERDIMENSION]            BIGINT           NOT NULL,
+    [GENERALJOURNALENTRY]        BIGINT           NOT NULL,
+    [TEXT]                       NVARCHAR (60)    NOT NULL,
+    [REASONREF]                  BIGINT           NOT NULL,
+    [PROJID_SA]                  NVARCHAR (20)    NOT NULL,
+    [PROJTABLEDATAAREAID]        NVARCHAR (4)     NOT NULL,
+    [HISTORICALEXCHANGERATEDATE] DATETIME         NOT NULL,
+    [LEDGERACCOUNT]              NVARCHAR (500)   NOT NULL,
+    [MAINACCOUNT]                BIGINT           NOT NULL,
+    [CREATEDTRANSACTIONID]       BIGINT           NOT NULL,
+    [RECVERSION]                 INT              NOT NULL,
+    [PARTITION]                  BIGINT           NOT NULL,
+    [RECID]                      BIGINT           NOT NULL,
+    [ROLLANDEDCOSTDONESTATUS]    INT              NOT NULL,
+    CONSTRAINT [I_3119RECID] PRIMARY KEY CLUSTERED ([RECID] ASC)
+);
+
